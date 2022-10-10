@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ExtensionManifest Version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="dhzx.CreatNewDocument" ExtensionBundleName="dhzx.CreatNewDocument" ExtensionBundleVersion="5.0.18">
+    <Author><Kwok-Jay></Kwok-Jay></Author>
+    <Contact mailto="kwok_jay@qq.com" />
+    <Abstract href="http://dut.synology.me/" />
+    <ExtensionList>
+        <Extension Id="kj.cutAndSave" Version="1.0" /> <!-- 插件ID 和 版本-->
+    </ExtensionList>
+
+    <ExecutionEnvironment>
+        <HostList>
+            <!-- 设置插件能在 14.0 版本之后 PhotoShop 中运行-->
+            <Host Name="PHXS" Version="14.0" />
+            <Host Name="PHSP" Version="14.0" />
+            <Host Name="ILST" Version="17.0" />
+        </HostList>
+
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="6.0" />
+        </RequiredRuntimeList>
+
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="kj.cutAndSave">
+            <DispatchInfo>
+                <Resources>
+                    <MainPath>./index.html</MainPath> <!-- 程序入口-->
+                    <ScriptPath>./jsx/main.jsx</ScriptPath> <!-- 插件自动加载的jsx文件 -->
+                </Resources>
+
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                    <StartOn></StartOn>
+                </Lifecycle>
+
+                <UI>
+                    <Type>Panel</Type> <!-- 插件模式：面板-->
+                    <Menu>裁图辅助工具</Menu> <!-- 插件在面板上的标题-->
+                    <Geometry> <!-- 插件尺寸-->
+                        <Size>
+                            <Height>150</Height>
+                            <Width>200</Width>
+                        </Size>
+                        <MaxSize>
+                            <Height>150</Height>
+                            <Width>200</Width>
+                        </MaxSize>
+                        <MinSize>
+                            <Height>150</Height>
+                            <Width>200</Width>
+                        </MinSize>
+                    </Geometry>
+                    <Icons><!-- 插件图标-->
+                        <Icon Type="Normal">./img/icon.png</Icon>
+                        <Icon Type="RollOver">./img/icon.png</Icon>
+                        <Icon Type="DarkNormal">./img/icon.png</Icon>
+                        <Icon Type="DarkRollOver">./img/icon.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>

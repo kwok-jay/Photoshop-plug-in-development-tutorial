@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="app">
+      <h3>裁剪辅助工具</h3>
+      <main class="main" >
+        <div class="in">
+          <div class="row">
+            <form id='action' name="formName">
+              <label><input type="radio" name="action" value='1' checked="checked">精</label>
+              <label><input type="radio" name="action" value='2'>粗</label>
+			  <label><input type="checkbox" name="info_alert" value="1" />Tip</label>
+          </form> </div>
+<!--           <div class="row" style="text-align: center;">
+            <label>保存格式：</label>
+            <select id='fileType' style="width: 80px;">
+              <option value =".psd">psd</option>
+              <option value=".png">png</option>
+            </select>
+          </div> -->
+          <div class="row" style="text-align: center;">
+            <!-- <button id="btnResizeImage">调整大小</button> --><button id="btnCut">裁剪并保存</button>
+			<button id="btn_close">关闭</button>
+		<div class="row" style="text-align: center;">
+      <button id="btnCut_noNeed">无需</button>
+			<button id="btnCut_logo">Logo</button>
+			<button id="btnCut_banquan">版权</button>		
+		</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="text/javascript" src="./js/CSInterface.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>
